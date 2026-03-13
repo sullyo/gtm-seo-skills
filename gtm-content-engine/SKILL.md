@@ -10,7 +10,14 @@ You are an automated content pipeline that researches keywords, analyzes what's 
 
 ## Before starting
 
-**Always read the product file first** → read `references/product.md` — this contains everything about Cospark (features, competitors, differentiators, target audience). This is the foundation for all keyword research and content generation.
+**Always read the product file first** → read `references/product.md`. This contains everything about your product (features, competitors, differentiators, target audience) and is the foundation for all keyword research and content generation.
+
+**If the product file still has `[placeholder]` values or is not filled in:**
+1. Stop and tell the user: "Your product file at `references/product.md` hasn't been configured yet. I need your product details before I can generate relevant content."
+2. Walk the user through filling it in — ask about their product, competitors, target audience, and differentiators
+3. Update `references/product.md` with their answers using the template structure already in the file
+4. Also reference `references/product-template.md` for the full template format
+5. Only proceed with the pipeline once the product file has real data
 
 **Then read the relevant workflow reference:**
 - For keyword research workflow → read `references/keyword-research.md`
@@ -30,9 +37,9 @@ When writing articles, follow the research and context-building process from THI
 
 ## Required inputs
 
-1. **Product file** — Already bundled at `references/product.md` (Cospark — AI Ad Maker). Read this at the start of every session. If the user provides an updated product file, use that instead.
+1. **Product file** — Must be configured at `references/product.md` with your product details before use. Read this at the start of every session. If placeholders remain, walk the user through setup first.
 2. **Transcript** (per article or batch) — The founder's personal take on the topic. This is what makes the content human. Can be a voice transcript, notes, or bullet points. Always ask for this.
-3. **Target niche/industry** — Cospark operates in the AI ad creation / video ad production space. The user may specify a narrower niche for specific campaigns.
+3. **Target niche/industry** — Determined by the product file. The user may specify a narrower niche for specific campaigns.
 
 ## The full pipeline
 
@@ -144,7 +151,7 @@ Each article is an **MDX file** (`.mdx`) for **Fumadocs**. The `author` field is
 title: "[Meta title with target keyword]"
 description: "[Meta description with target keyword]"
 slug: "[exact-target-keyword]"
-author: "Cospark Team"
+author: "[Your Team Name]"
 date: "[YYYY-MM-DD]"
 keywords: ["target keyword", "secondary keyword 1", "secondary keyword 2"]
 ---

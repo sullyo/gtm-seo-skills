@@ -11,6 +11,8 @@ description: >
   or any request involving keyword metrics, backlink profiles, or organic traffic estimates.
   Also trigger when the user references the Keywords Everywhere tool, connector, or API by name.
   Do NOT use for general web searching or content writing — this is strictly for SEO/SEM data retrieval.
+credentials:
+  - KEYWORDS_EVERYWHERE_API_KEY
 ---
 
 # Keywords Everywhere Skill
@@ -23,6 +25,23 @@ Retrieve SEO and SEM data from the Keywords Everywhere REST API using a Python C
 ```bash
 pip install requests --break-system-packages
 ```
+
+## API Key Setup
+
+This skill requires a **Keywords Everywhere API key**. Set it as an environment variable:
+
+```bash
+export KEYWORDS_EVERYWHERE_API_KEY='your-api-key-here'
+```
+
+**Where to get your API key:**
+
+1. Go to [keywordseverywhere.com](https://keywordseverywhere.com) and create an account (or log in)
+2. Purchase API credits (plans start at $1 for 100,000 credits)
+3. Navigate to **API** > **API Settings** at [keywordseverywhere.com/api-settings.html](https://keywordseverywhere.com/api-settings.html)
+4. Copy your API key from that page
+
+To make the key persistent, add the export line to your shell profile (`~/.zshrc`, `~/.bashrc`, etc.).
 
 ## Quick Start
 
